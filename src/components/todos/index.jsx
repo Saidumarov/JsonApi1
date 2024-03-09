@@ -24,7 +24,7 @@ function Todos({ data }) {
                     <div key={i} className="user_card3">
                       <p id="n">{el.completed ? "✔" : "❌"}</p>
                       <p>
-                        Body:<span>${el?.title}</span>
+                        Body:<span>{el?.title}</span>
                       </p>
                     </div>
                   );
