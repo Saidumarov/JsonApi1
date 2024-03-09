@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(2, 8, 23);
+}
+.container {
+  width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.902);
+  h1 {
+    font-size: 50px;
+    padding-top: 80px;
+  }
+}
+
+@mixin button {
+  background-color: #6f00ff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 0.875rem;
+  height: 38px;
+  width: 100px;
+  padding: 7px 14px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.users {
+  width: 100%;
+  height: 100%;
+  .user_p {
+    font-size: 25px;
+  }
+  .user_cards {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    .user_card1 {
+      width: 400px;
+      height: 180px;
+      background-color: rgb(17, 24, 38);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.541);
+      box-shadow: 0 7px 15px 0 rgba(255, 255, 255, 0.126);
+      padding-top: 20px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      p {
+        padding-left: 20px;
+        padding-right: 10px;
+      }
+      button {
+        @include button();
+        margin: 0 auto;
+        position: absolute;
+        bottom: 30px;
+        margin-left: 20px;
+        width: 90%;
+      }
+    }
+    .user_card2 {
+      width: 600px;
+      height: 180px;
+      background-color: rgb(17, 24, 38);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.541);
+      box-shadow: 0 7px 15px 0 rgba(255, 255, 255, 0.126);
+      padding-top: 20px;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+      p {
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        span {
+          padding-left: 10px;
+        }
+      }
+      #e {
+        color: #7a2cdf;
+      }
+      #n {
+        color: #ad7eea;
+      }
+      button {
+        @include button();
+        margin: 0 auto;
+        position: absolute;
+        bottom: 30px;
+        margin-left: 20px;
+        width: 90%;
+      }
+    }
+    .user_card3 {
+      width: 600px;
+      height: 60px;
+      background-color: rgb(17, 24, 38);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.541);
+      box-shadow: 0 7px 15px 0 rgba(255, 255, 255, 0.126);
+      padding-top: 20px;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+      p {
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+      }
+      #n {
+        position: absolute;
+        right: 30px;
+      }
+    }
+    .user_card {
+      width: 400px;
+      height: 400px;
+      background-color: rgb(17, 24, 38);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.541);
+      box-shadow: 0 7px 15px 0 rgba(255, 255, 255, 0.126);
+      padding-top: 20px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      p {
+        font-family: sans-serif;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-top: 20px;
+        span {
+          padding-left: 10px;
+        }
+      }
+      .buttons {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 40px;
+        button {
+          @include button();
+        }
+        button:hover {
+          opacity: 0.8;
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.loading_card {
+  width: 70%;
+  height: 120%;
+  background-color: rgb(30, 41, 59);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  transform: rotate(5deg);
+  filter: blur(80px);
+  animation: 1s loading infinite linear;
+}
+@keyframes loading {
+  0% {
+    left: -170%;
+  }
+
+  100% {
+    left: 170%;
+  }
+}
+
+.photos1 {
+  width: 80px;
+  height: 80px;
+}
+#photos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    margin-right: 20px;
+  }
+}
+
+#user_card2 {
+  height: 120px;
+  padding-top: 0;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin-top: 30px;
+  h1 {
+    padding: 0 !important;
+  }
+  button {
+    @include button();
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.add {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .rek {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+    button {
+      @include button();
+      font-size: 15px;
+      width: 150px;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .add {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    .rek {
+      margin-top: 30px;
+    }
+  }
+}
