@@ -244,6 +244,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 80px;
     svg {
       width: 30px;
       height: 30px;
@@ -263,7 +264,7 @@ a {
     display: grid;
     grid-template-columns: auto;
     .rek {
-      margin-top: 30px;
+      padding-top: 30px;
     }
   }
 }
